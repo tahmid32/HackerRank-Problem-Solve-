@@ -17,16 +17,12 @@ import sys
 
 def matchingStrings(strings, queries):
     # Write your code here
+    results = []
     
-    queries_length = len(queries)
-    results = [0 for i in range(queries_length)]
+    for item in queries:
+        results.append(strings.count(item))
     
-    for str in strings:
-        if (str in queries):
-            index = queries.index(str)
-            results[index] += 1
-        
-    return results
+    return results 
         
 
 if __name__ == '__main__':
